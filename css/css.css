@@ -215,18 +215,31 @@ header {
 /* MAIN SEKTION */
 
 /* Ikoner i flexbox */
+
 .ikon-flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 200px; /* afstand mellem ikonerne */
-  margin: 100px 0;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 60px; /* afstand mellem ikonerne */
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: 100px; /* Hører til CECILIES */
+  margin-bottom: 150px;
+} 
+
+.ikon-wrapper {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
 }
 
 .ikon img {
+  display: block;
   width: 90px;
   height: 90px;
   object-fit: contain;
+  margin-bottom: 12px;
 }
 
 /* ikon baggrund */
@@ -238,58 +251,31 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  
 }
 
-/* Underoverskrifter til ikoner */
+/* Tekster under ikon-bokse */
 
-.h3-flex {
-  display: flex;
-  justify-content: center;
-  gap: 160px; /* afstand mellem h3'erne */
-  margin-top: 30px;
-  text-align: center
-}
-
-.h3-flex h3 {
-  font-family: plus-jakarta-sans, sans-serif;
-  color: #000000;
+/* Overskrift under ikon-bokse */
+.ikon-wrapper h3 {
+  font-family: 'plus-jakarta-sans', sans-serif;
   font-size: 2rem; 
-}
-
-/* brødtekst under ikoner */
-.h4-flex {
-  display: flex;
-  justify-content: center center;
-  gap: 130px; /* afstand mellem h4'erne */
+  font-weight: bold;
+  color: #38040E;
   margin-top: 50px;
-  margin-left: 170px;
-  margin-right: 150px;
-  text-align: center; 
+  text-align: left; -ms-flex-align: start;
 }
 
-.h4-flex h4 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #000000;
-  font-size: 1.2rem; 
+/* Brødtekst under ikon-bokse */
+.ikon-wrapper p {
+  font-family: 'plus-jakarta-sans', sans-serif;
+  font-size: 1rem;
+  color: #38040E;
+  margin-top: 30px;
+  text-align: center;
+  width: 300px; 
 }
 
-/* Stemningsbilleder */
 
-.billeder-split {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 60px 0;
-}
-
-.billeder-split img {
-  width: 500px;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
 
 /* Baggrundsbillede hele siden, den blå bølge */
 body {
@@ -304,50 +290,220 @@ body {
   margin-bottom: 330vh;
 }
 
+/* STRYLING TRUSTPILOT KOLONNER */
+
+/* mia To kolonner side om side */ 
+* {
+  box-sizing: border-box;
+}
+
+/*  mia Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%; /* hver kolonne tager 50% af bredden*/ 
+  padding: 0px; /* plads inde i kolonnerne */
+  height: 350px; /* juster højden efter behov */
+  margin-top: 0%;
+  margin-bottom: 0px;
+  shape-margin: 100px;
+
+}
+
+/* h2 overskrift over kolonnerne */
+h2 {
+  font-family: var(--jost);
+  font-size: 6rem;
+  color:#F1C6CD;
+  margin-top: 50px;
+  margin-bottom: 1px;
+  margin-left: 85px;
+}
+
+/* mia profilbillede i kolonnerne */
+.column img {
+  width: 45%; /* billedet fylder hele kolonnen */
+  height: auto; /* bevarer billedets proportioner */
+}
+
+/* mia ryk profilbillede til højre */
+.column img {
+  display: block;
+  margin-left: -60px;
+  margin-top: 10px;
+}
+
+
+/* mia tekst under profilbillede */
+.column p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #000000;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right:auto;
+}
+
+/* tekst centrering */
+.column p {
+display: block;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+/* mia Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table; 
+  clear: both; 
+}
+
+/* mia trustpilot billede i bunden af midten */
+.trustpilot-billede {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 100px;
+}
+
+.trustpilot-billede img {
+  width: 150px; /* juster størrelsen efter behov */
+  height: auto;
+}
+
 /* Footer styling */
-footer {
-  background-color: #F2C7CE;
-  color: #650A08;
-  text-align: left;
-  padding: 30px 0;
-  font-size: 1.2rem;
-  width: 100%;
+
+.footer h1{
+  font-family: "Zen Tokyo Zoo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: #38040E;
+  line-height: 1.6;
+}
+
+.footer {
+  background-color: #F5C5CE;
+  padding: 80px 0 40px 0;
+  color: #38040E;
+  font-size: 16px;
+}
+
+.footer-col:not(:first-child) {
+  margin-top: 25px;
 }
 
 .footer-columns {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 60px; /* større afstand mellem kolonner */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 30px 0;
+  gap: 5px;
 }
 
 .footer-col {
-  flex: 1;
-  min-width: 180px;
-  padding: 0 10px; /* lidt indvendig luft */
+  flex: 1 1 200px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  line-height: 3;
 }
-footer h6 {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1rem;
+
+.footer-col h5 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
+.footer-col h5:nth-of-type(2) {
+  margin-top: 30px;
+}
+.footer-col:last-child {
+  min-width: 450px; /* Øg bredden */
+}
+.footer-col h5 {
+  font-size: 17px;
+}
+
+.footer-col a {
+  color: #38040E;
+  text-decoration: none;
+  font-size: 15px;
+  margin-bottom: 4px;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: #38040E;
+}
+
 .footer-email {
   padding: 8px;
-  border: 1px solid #650A08;
-  border-radius: 4px;
-  width: 80%;
-  margin-bottom: 8px;
+  border: 1px solid #38040E;
+  background-color: #fdeff1;
+  color: #000;
+  border-radius: 6px;
+  margin-right: 8px;
+  font-size: 15px;
 }
-.footer-col form button {
+
+.footer-col button {
   padding: 8px 16px;
-  background: #650A08;
-  color: #FDF4F4; 
+  background: #38040E;
+  color: #F9DDE1;
+
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 15px;
+}
+
+.footer-col button:hover {
+  background: #b3004b;
 }
 .footer-col form {
-  margin-bottom: 16px;
+  display: flex;
+  gap: 0;
+  align-items: center;
 }
+.footer-col:last-child h5:first-child {
+  margin-bottom: 0px; /* Allerede sat til 0, så ingen afstand */
+}
+
+.footer-col:last-child form {
+  margin-top: 0; /* Ingen ekstra afstand over formen */
+}
+
+.footer-col:last-child {
+  gap: 0px; /* Ingen vertikal afstand mellem elementer i kolonnen */
+}
+.footer-email {
+  margin-right: 0;
+}
+
+.footer h6 {
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  margin-top: auto;
+  color: #38040E;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 2;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .footer-col {
+    min-width: 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+
