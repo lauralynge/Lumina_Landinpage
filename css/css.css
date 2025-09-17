@@ -276,6 +276,7 @@ header {
 }
 
 /* Stemningsbilleder */
+
 .billeder-split {
   display: flex;
   justify-content: space-between;
@@ -284,24 +285,10 @@ header {
 }
 
 .billeder-split img {
-  width: 100px;
+  width: 500px;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-
-.højtaler-billede {
-  display: flex;
-  justify-content: flex-end;
-}
- {
-  width: 500px;
-  height: auto;
-  margin-top: -600px;
-  margin-right: 60px;
-  position: absolute;
-  top: 98%;
-  right: 0%;
 }
 
 /* Baggrundsbillede hele siden, den blå bølge */
@@ -344,4 +331,19 @@ footer h6 {
   text-align: center;
   margin-top: 20px;
   font-size: 1rem;
+}
+.footer-email {
+  padding: 8px;
+  border: 1px solid #650A08;
+  border-radius: 4px;
+  width: 80%;
+  margin-bottom: 8px;
+}
+.footer-col form button {
+  padding: 8px 16px;
+  background: #650A08;
+  color: #FDF4F4; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
