@@ -36,8 +36,8 @@
 .monoton-regular{
   font-family: "Monoton", sans-serif;
   font-weight: 400;
-  font-style: normal;}
-*/
+  font-style: normal;
+}
 
 /*typografi*/
 
@@ -97,6 +97,14 @@ h1 {
   color: #1100FF;
   letter-spacing: 6px; /* afstand mellem bogstaverne */
 } 
+
+h1.header-title {
+  color: #1100FF;
+}
+
+h1.footer-title {
+  color: #38040E;
+}
 
 /*Venstre navigation*/
 #topNavVenstre{
@@ -216,6 +224,7 @@ header {
 
 /* Ikoner i flexbox */
 
+
 .ikon-flex {
   display: flex;
   justify-content: space-evenly;
@@ -234,12 +243,14 @@ header {
  justify-content: center;
 }
 
+.flexikoner {
+    flex-direction: row;
+}
+
 .ikon img {
-  display: block;
   width: 90px;
   height: 90px;
   object-fit: contain;
-  margin-bottom: 12px;
 }
 
 /* ikon baggrund */
@@ -253,19 +264,16 @@ header {
   justify-content: center;
 }
 
-/* Tekster under ikon-bokse */
 
-/* Overskrift under ikon-bokse */
+/* Tekster under ikon-bokse */
+  /* Overskrift under ikon-bokse */
 .ikon-wrapper h3 {
   font-family: 'plus-jakarta-sans', sans-serif;
-  font-size: 2rem; 
-  font-weight: bold;
-  color: #38040E;
-  margin-top: 50px;
-  text-align: left; -ms-flex-align: start;
 }
+  
 
-/* Brødtekst under ikon-bokse */
+  
+  /* Brødtekst under ikon-bokse */
 .ikon-wrapper p {
   font-family: 'plus-jakarta-sans', sans-serif;
   font-size: 1rem;
@@ -275,115 +283,94 @@ header {
   width: 300px; 
 }
 
-
-
-/* Baggrundsbillede hele siden, den blå bølge */
-body {
-  position: relative;
-  height: 100vh;
-  background-image: url('../images/hej.png');
-  background-size: cover;
-  background-position: 70%;
-  background-repeat: no-repeat;
-  background-size: 118%;
-  rotate: 50%;
-  margin-bottom: 330vh;
-}
-
-/* STRYLING TRUSTPILOT KOLONNER */
-
-/* mia To kolonner side om side */ 
-* {
+/* Footer styling */
+*{
+  padding: 0%;
+  margin:0%;
   box-sizing: border-box;
+  font: 100% Jost, sans-serif;
+}
+.footer.container{
+  background-color: #F2C7CE;
+  padding: 4rem 0.4rem 0 ;
 }
 
-/*  mia Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%; /* hver kolonne tager 50% af bredden*/ 
-  padding: 0px; /* plads inde i kolonnerne */
-  height: 350px; /* juster højden efter behov */
-  margin-top: 0%;
-  margin-bottom: 0px;
-  shape-margin: 100px;
-
-}
-
-/* h2 overskrift over kolonnerne */
-h2 {
-  font-family: var(--jost);
-  font-size: 6rem;
-  color:#F1C6CD;
-  margin-top: 50px;
-  margin-bottom: 1px;
-  margin-left: 85px;
-}
-
-/* mia profilbillede i kolonnerne */
-.column img {
-  width: 45%; /* billedet fylder hele kolonnen */
-  height: auto; /* bevarer billedets proportioner */
-}
-
-/* mia ryk profilbillede til højre */
-.column img {
-  display: block;
-  margin-left: -60px;
-  margin-top: 10px;
-}
-
-
-/* mia tekst under profilbillede */
-.column p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #000000;
-  font-size: 1.5rem;
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-right:auto;
-}
-
-/* tekst centrering */
-.column p {
-display: block;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 20px;
-}
-
-/* mia Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table; 
-  clear: both; 
-}
-
-/* mia trustpilot billede i bunden af midten */
-.trustpilot-billede {
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 100px;
-}
-
-.trustpilot-billede img {
-  width: 150px; /* juster størrelsen efter behov */
+.footer{
+  width: 80%;
   height: auto;
+  background-color: #F2C7CE;
+  color: #38040E;
+  display: flex;  
+  justify-content: center;
+  flex-wrap: wrap;
+  margin:0 auto; 
+}
+
+.footer.heading{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+}
+
+.footer-heading h5{
+  margin-bottom: 2rem;
+}
+footer-heading a{
+  color: #650A08;
+  text-decoration: none;
+ margin-bottom: 0.5rem;
+}
+
+.footer-heading a:hover{
+  color: 2E61B2;
+  transition: 0.3s ease-out;
+}
+
+.footer.email.form h5{
+  margin-bottom: 2rem;
+}
+
+#footer.email{
+  width: 250px;
+   height: 40px;
+   border-radius: 6px;
+    outline: none;
+    border:#650A08;
+  padding-left: 0.5rem ;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#footer.email::placeholder{
+  color: #650A08;
+  font-size: 1rem;
+}
+
+#button{
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #650A08;
+   outline: none;
+    border:#650A08;
+    font-size: 1rem;
+    
+  
 }
 
 /* Footer styling */
 
-.footer h1{
+footer h1{
   font-family: "Zen Tokyo Zoo", system-ui;
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 400;100 font-style: normal;
   font-size: 48px;
   margin-bottom: 16px;
   color: #38040E;
   line-height: 1.6;
 }
 
-.footer {
-  background-color: #F5C5CE;
+footer {
+  background-color:#F5E1E1;
   padding: 80px 0 40px 0;
   color: #38040E;
   font-size: 16px;
@@ -448,7 +435,7 @@ display: block;
   font-size: 15px;
 }
 
-.footer-col button {
+.footer-col button { 
   padding: 8px 16px;
   background: #38040E;
   color: #F9DDE1;
@@ -482,7 +469,8 @@ display: block;
   margin-right: 0;
 }
 
-.footer h6 {
+/* ...eksisterende kode... */
+footer h6 {
   width: 100%;
   text-align: center;
   font-size: 13px;
@@ -506,4 +494,3 @@ display: block;
     align-items: flex-start;
   }
 }
-
